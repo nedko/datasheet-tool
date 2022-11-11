@@ -27,3 +27,10 @@ then
   DS_FILE_DIR="ti.com/"
   show_datasheet
 fi
+
+URL_PREFIX="https://components\.omron\.com/us-en/datasheet_pdf/"
+if echo "${URL}" | grep -q "${URL_PREFIX}"
+then
+  DS_FILE_DIR="omron.com/"
+  show_datasheet
+fi
