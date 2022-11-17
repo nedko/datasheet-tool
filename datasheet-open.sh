@@ -5,7 +5,10 @@ set -e
 
 URL="${1}"
 
-DS_ROOT=$(dirname "${0}")/
+if test -z "${DS_ROOT}"
+then
+  DS_ROOT=$(dirname "${0}")/
+fi
 
 function show_datasheet
 {
